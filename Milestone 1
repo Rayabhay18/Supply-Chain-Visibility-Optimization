@@ -1,0 +1,43 @@
+
+As part of the Supply Chain Visibility & Optimization project, your first milestone has been defined.
+
+This milestone focuses on building a strong data foundation by importing, cleaning, and modeling the supply chain dataset, followed by creating the core KPIs required for further analytics.
+
+Milestone 1: Data Modelling 
+
+Objectives:
+Import the supply chain dataset into Power BI.
+Perform Data preprocessing:
+Handle missing values and duplicates.
+Correct data types.
+Rename columns where necessary.
+Apply required data transformations using Power Query.Design a star schema data model:  
+         3. Design a star schema data model:
+Create appropriate fact and dimension tables.
+Define primary and foreign key relationships.
+Ensure the model supports business analysis efficiently.
+Requirements:
+Use Power BI Desktop (.pbix).
+Follow a proper star schema data model.
+Use meaningful table and column names.
+Create reusable DAX measures.
+Create a public GitHub repository named: SupplyChain_Visibility_Optimization
+
+Inside, create the following folder structure:
+
+Milestone1/
+├── SupplyChain_Milestone1.pbix
+├── data/
+│   └── SupplyChain.csv
+├── screenshots/
+│   └── Data_model.png
+└── README.md
+
+Your README.md should clearly include:Objective, Dataset Source (URL or description), Data Cleaning and Transformation Steps, Data Model Overview, Tools Used
+
+Submission:
+Share your Milestone 1 GitHub repository link via reply to this email for evaluation.
+
+Deadline: 08 July 2026 Wednesday 09:00 PM
+
+Please ensure that your Power BI project is well-structured, reproducible, and clearly demonstrates your understanding of data modelling, DAX, and dashboard development. This milestone forms the foundation for the upcoming inventory, delivery, supplier, and transportation analytics modules.

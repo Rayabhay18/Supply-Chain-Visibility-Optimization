@@ -1,1 +1,75 @@
+Project Overview
+This project focuses on improving supply chain visibility using Power BI by analyzing inventory performance and delivery efficiency. The dashboard provides insights into inventory turnover, identification of slow/fast-moving products, and delivery performance metrics.
+Project Structure
+Supply_Chain_Visibility_Optimization/
+└── Milestone 2/
+    ├── Milestone2_PowerBI.pbix
+    ├── screenshots/
+    │   ├── Inventory_Analytics.png
+    │   └── Delivery_Performance.png
+    └── README.md
+nventory Turnover Calculation Approach
 
+Inventory turnover measures how efficiently inventory is utilized over time.
+
+Formula Used:
+Inventory Turnover Ratio (Value)
+Inventory Turnover = Total Sales / Average Inventory Value
+Inventory Turnover Ratio (Units)
+Inventory Turnover (Units) = Units Sold / Average Stock Quantity
+DAX Measures:
+Total Sales = SUM(Fact_table[sales])
+Units Sold = SUM(Fact_table[order_item_quantity])
+Avg Inventory Value = AVERAGE(Fact_table[inventory_value])
+Purpose:
+Higher turnover → Efficient inventory management
+Lower turnover → Overstocking or low demand
+Slow-Moving & Fast-Moving Inventory Identification Logic
+Logic Used:
+Fast-Moving Inventory
+High inventory turnover ratio
+High sales volume
+Slow-Moving Inventory
+Low inventory turnover ratio
+Low sales volume
+Classification Approach:
+
+Products are ranked using:
+
+Turnover Rank = RANKX(
+    ALL(Fact_table[category_name]),
+    [Inventory Turnover Ratio],
+    ,
+    DESC
+)
+Categories:
+Top-ranked items → Fast-moving
+Bottom-ranked items → Slow-moving
+Business Importance:
+Helps reduce holding costs
+Identifies dead stock
+Improves demand planning
+Delivery Performance Analysis Methodology
+Key Metrics Used:
+Delivery Delay = Actual Delivery Date – Scheduled Delivery Date
+
+On-Time Delivery Rate
+
+On-Time Delivery % = 
+(Number of On-Time Deliveries / Total Deliveries) * 100
+Analysis Approach:
+Compare scheduled vs actual delivery dates
+Identify delayed shipments
+Analyze performance by region, shipping mode, and category
+Insights Derived:
+Delay patterns across regions
+Inefficient shipping methods
+Impact of delays on customer satisfaction
+📈 Key Insights
+Certain product categories show high turnover, indicating strong demand.
+Some categories are slow-moving, leading to excess inventory and higher storage costs.
+Delivery delays are concentrated in specific regions and shipping modes.
+On-time delivery performance varies significantly across categories.
+Conclusion
+
+This dashboard enhances supply chain visibility by providing actionable insights into inventory and delivery performance. It enables businesses to make data-driven decisions, reduce costs, and improve operational efficiency.

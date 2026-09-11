@@ -1,0 +1,197 @@
+# Brazilian E-Commerce Sales, Delivery & Customer Satisfaction Analysis
+
+## 1. Project Overview
+
+This project analyzes the Brazilian E-Commerce Public Dataset by Olist to understand sales performance, product categories, delivery performance, and customer satisfaction.
+
+The main objective is to identify business insights and provide actionable recommendations that can help improve operational performance, customer experience, and revenue management.
+
+---
+
+## 2. Dataset
+
+**Dataset:** Brazilian E-Commerce Public Dataset by Olist
+
+**Source:** Kaggle
+
+**Period:** 2016–2018
+
+**Approximate Orders:** 100,000
+
+The dataset contains multiple related tables covering:
+
+- Orders
+- Customers
+- Order Items
+- Payments
+- Reviews
+- Products
+- Sellers
+- Geolocation
+- Product Category Translation
+
+Dataset link:
+
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
+
+---
+
+## 3. Business Problem
+
+Management wants to understand how sales performance, product categories, delivery performance, and customer satisfaction affect overall e-commerce performance.
+
+The analysis focuses on identifying sales trends, high-performing categories, delivery issues, and factors associated with poor customer reviews.
+
+---
+
+## 4. Business Questions
+
+The project addresses the following questions:
+
+1. Which product categories generate the highest revenue and sales volume?
+2. How do sales and order volumes change over time?
+3. How does delivery performance vary across orders and sellers?
+4. Is there an association between delivery delays and customer review scores?
+5. Which sellers or product categories have relatively poor performance?
+
+---
+
+## 5. Tools & Technologies
+
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Google Colab**
+- **Google Sheets**
+- **Looker Studio**
+- **GitHub**
+
+---
+
+## 6. Data Processing Methodology
+
+The data processing workflow included:
+
+1. Loading the Olist CSV files using Python and Pandas.
+2. Checking the datasets for duplicate records.
+3. Identifying and reviewing missing values.
+4. Converting date columns into appropriate datetime formats.
+5. Joining related datasets using common keys such as `order_id`, `product_id`, `customer_id`, and `seller_id`.
+6. Creating calculated fields such as:
+   - Delivery Days
+   - Estimated Delivery Days
+   - Delivery Status
+   - Purchase Month
+   - Total Item Value
+7. Exporting the processed dataset for further analysis and visualization.
+
+Missing values were handled carefully rather than being automatically replaced, particularly for delivery dates and customer review scores.
+
+---
+
+## 7. Analysis
+
+The analysis covers:
+
+### Sales Analysis
+- Total orders
+- Total revenue
+- Average order value
+- Monthly revenue trends
+
+### Product Analysis
+- Revenue by product category
+- Top-performing product categories
+- Sales concentration across categories
+
+### Delivery Analysis
+- Average delivery time
+- On-time vs late deliveries
+- Delivery performance
+
+### Customer Satisfaction
+- Average review score
+- Review score distribution
+- Relationship between delivery performance and review scores
+
+---
+
+## 8. Dashboard
+
+An interactive Looker Studio dashboard was created to provide a visual overview of the analysis.
+
+The dashboard includes:
+
+- Total Orders
+- Total Revenue
+- Average Review Score
+- On-Time Delivery %
+- Monthly Revenue Trend
+- Top 10 Product Categories by Revenue
+- Order Status Distribution
+- Customer Review Score Distribution
+- Delivery Performance
+- Customer State Filter
+- Product Category Filter
+
+---
+
+## 9. Key Recommendations
+
+### 1. Improve Late Delivery Performance
+
+Identify sellers, routes, and operational areas with frequent delays and improve logistics monitoring.
+
+**Expected impact:**
+- Fewer late deliveries
+- Better customer experience
+- Improved customer satisfaction
+
+### 2. Focus on High-Performing Categories
+
+Prioritize high-revenue product categories for marketing, inventory planning, and seller partnerships.
+
+**Expected impact:**
+- Better allocation of resources
+- Improved sales opportunities
+- Potential revenue growth
+
+### 3. Improve Experience for Low-Rated Orders
+
+Investigate orders receiving low review scores, particularly where delivery problems or seller performance issues are present.
+
+**Expected impact:**
+- Higher customer satisfaction
+- Fewer negative reviews
+- Better overall customer experience
+
+---
+
+## 10. Limitations
+
+- The dataset represents historical transactions from 2016–2018.
+- Marketing expenditure and campaign information is not available.
+- Detailed profit and operational cost information is limited.
+- Some fields contain missing values.
+- Multiple records can exist for a single order because an order may contain multiple products or payments.
+- The analysis identifies associations and patterns; it does not prove that one factor directly causes another.
+
+---
+
+## 11. Project Files
+
+The repository contains:
+
+- `Olist_Analysis.ipynb` — Python/Google Colab analysis notebook
+- `Olist_Ecommerce_Analysis.xlsx` — Project worksheets and analysis
+- `Processed_Data.csv` — Processed dataset
+- `README.md` — Project documentation
+- Presentation file — Management presentation
+
+---
+
+## 12. Conclusion
+
+The project demonstrates how e-commerce transaction data can be cleaned, integrated, analyzed, and visualized to support business decision-making.
+
+The analysis provides insights into sales trends, product category performance, delivery operations, and customer satisfaction, while the recommendations focus on improving delivery performance, optimizing high-performing categories, and addressing low customer ratings.
